@@ -52,7 +52,7 @@ body {
 }
 
 .manual-btn:not(:last-child) {
-    margin-right: 40px; /* Espaçamento entre os botões, exceto o último */
+    margin-right: 40px; /* Espaçamento entre os botões, exceto o  último */
 }
 
 .manual-btn:hover {
