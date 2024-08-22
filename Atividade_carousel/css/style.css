@@ -1,111 +1,104 @@
-body{
+body {
     margin: 0;
-    padding: 0%;
+    padding: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    height: 100vh; /* A altura da tela será 100% da altura da janela de visualização */
+    display: flex; /* Usa flexbox para alinhar o conteúdo no centro da tela */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
-.slider{
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
+.slider {
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    width: 800px; /* Define a largura do carrossel */
+    height: 400px; /* Define a altura do carrossel */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites do carrossel */
 }
 
-.slides{
-    width: 400%;
-    height: 400px;
-    display: flex;
+.slides {
+    width: 400%; /* Define a largura total como 400% para comportar 4 slides */
+    height: 400px; /* Altura dos slides */
+    display: flex; /* Alinha os slides horizontalmente */
 }
 
-.slides input{
-    display: none;
+.slides input {
+    display: none; /* Esconde os botões de rádio */
 }
 
-.slide{
-    width: 25%;
+.slide {
+    width: 25%; /* Cada slide ocupa 25% da largura total do container "slides" */
+    position: relative; /* Necessário para posicionar os elementos dentro do slide */
+    transition: 3s; /* Transição suave entre os slides */
+}
+
+.slide img {
+    width: 800px; /* Largura da imagem para preencher o slide */
+}
+
+.manual-navigation {
     position: relative;
-    transition: 3s;
+    width: 800px; /* Largura da navegação manual */
+    margin-top: -40px; /* Move a navegação manual para cima, sobrepondo o carrossel */
+    display: flex; /* Flexbox para alinhar os botões manualmente */
+    justify-content: center; /* Centraliza os botões de navegação manual */
 }
 
-.slide img{
-    width: 800px;
+.manual-btn {
+    border: 2px solid #fff; /* Bordas brancas nos botões de navegação manual */
+    padding: 5px; /* Espaçamento interno dos botões */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: 2s; /* Transição suave para o efeito de hover */
 }
 
-.manual-navigation{
-    position: relative;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content:center;
+.manual-btn:not(:last-child) {
+    margin-right: 40px; /* Espaçamento entre os botões, exceto o último */
 }
 
-.manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 2s;
+.manual-btn:hover {
+    background-color: #fff; /* Muda a cor de fundo ao passar o mouse sobre o botão */
 }
 
-.manual-btn:not(:last-child){
-    margin-right: 40px;
+#radio1:checked ~ .first {
+    margin-left: 0; /* Move para o primeiro slide ao selecionar o primeiro botão de rádio */
 }
 
-.manual-btn:hover{
-    background-color: #fff;
+#radio2:checked ~ .first {
+    margin-left: -25%; /* Move para o segundo slide ao selecionar o segundo botão de rádio */
 }
 
-#radio1:checked ~.first{
-    margin-left: 0;
-
+#radio3:checked ~ .first {
+    margin-left: -50%; /* Move para o terceiro slide ao selecionar o terceiro botão de rádio */
 }
 
-#radio2:checked ~.first{
-    margin-left: -25%;
-
+.navigation-auto div {
+    border: 2px solid #20a6ff; /* Bordas azuis nos botões de navegação automática */
+    padding: 5px; /* Espaçamento interno dos botões */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: 2s; /* Transição suave para o efeito de hover */
 }
 
-
-#radio3:checked ~.first{
-    margin-left: -50%;
-}
-
-.navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 2s;
-    
-}
-
-.navigation-auto{
+.navigation-auto {
     position: absolute;
-    width: 800px;
-    margin-top: 360px;
-    display: flex;
-    justify-content: center;
+    width: 800px; /* Largura da navegação automática */
+    margin-top: 360px; /* Posiciona a navegação automática sobre o carrossel */
+    display: flex; /* Flexbox para alinhar os botões automaticamente */
+    justify-content: center; /* Centraliza os botões de navegação automática */
 }
 
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px; /* Espaçamento entre os botões, exceto o último */
 }
 
-#radio1 :checked ~.navigation-auto .auto-btn1{
-    background-color: #fff;
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff; /* Muda a cor de fundo do botão automático correspondente ao primeiro slide */
 }
 
-#radio2 :checked ~.navigation-auto .auto-btn2{
-    background-color: #fff;
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff; /* Muda a cor de fundo do botão automático correspondente ao segundo slide */
 }
 
-#radio3 :checked ~.navigation-auto .auto-btn3{
-    background-color: #fff;
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff; /* Muda a cor de fundo do botão automático correspondente ao terceiro slide */
 }
-

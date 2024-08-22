@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrossel</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para o arquivo CSS externo -->
 </head>
 
 <body>
-    
-    
-<div class ="slider">
 
-    <div class="slides "> <!--div pode ser entendido como uma "função"-->
-        <!--radio é para botão-->
+<div class="slider"> <!-- Div principal do carrossel -->
+
+    <div class="slides"> <!-- Container que envolve todos os slides -->
+        <!-- Inputs de tipo "radio" para navegação entre as imagens do carrossel -->
+        <!-- Cada "radio" corresponde a uma imagem e serve para controlar qual slide está visível -->
         <input type="radio" name="radio-btn" id="radio1">
         <input type="radio" name="radio-btn" id="radio2">
         <input type="radio" name="radio-btn" id="radio3">
-    
-        <!--fim radio-->
-        <!--slides imgs-->
-    
-        <div class="slide first">
+
+        <!-- Fim dos botões de rádio -->
+
+        <!-- Container para cada slide individual -->
+        <!-- Cada "slide" contém uma imagem diferente -->
+        <div class="slide first"> <!-- O primeiro slide tem uma classe adicional "first" -->
             <img src="https://th.bing.com/th/id/OIP.kQ2WPmYp6PRjuuP6QFt4twHaEK?rs=1&pid=ImgDetMain" alt="imagem 1">
         </div>
         <div class="slide">
@@ -31,30 +32,33 @@
         <div class="slide">
             <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/Neymar-Reproducao-Instagram-e1688394749817.jpg?w=900" alt="imagem 3">
         </div>
-    
-    <!--fim slide-->
-    
-    <!--navegation auto-->
-         <div class="navigation-auto">
-              <div class="auto-btn1"></div>
-              <div class="auto-btn2"></div>
-              <div class="auto-btn3"></div>
-         </div>
+        <!-- Fim dos slides -->
+
+        <!-- Navegação automática -->
+        <!-- Estes botões são usados para mudar os slides automaticamente -->
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div> <!-- Botão para o primeiro slide -->
+            <div class="auto-btn2"></div> <!-- Botão para o segundo slide -->
+            <div class="auto-btn3"></div> <!-- Botão para o terceiro slide -->
+        </div>
+        <!-- Fim da navegação automática -->
 
     </div>
-    
+    <!-- Fim do container "slides" -->
 
+    <!-- Navegação manual -->
+    <!-- Etiquetas associadas aos botões de rádio para navegação manual entre os slides -->
     <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
+        <label for="radio1" class="manual-btn"></label> <!-- Botão manual para o primeiro slide -->
+        <label for="radio2" class="manual-btn"></label> <!-- Botão manual para o segundo slide -->
+        <label for="radio3" class="manual-btn"></label> <!-- Botão manual para o terceiro slide -->
     </div>
-
+    <!-- Fim da navegação manual -->
 
 </div>
+<!-- Fim do container "slider" -->
 
-<script src="script.js"></script>
+<script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
 
 </body>
-
 </html>
