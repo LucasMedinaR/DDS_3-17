@@ -29,7 +29,7 @@ body{
 .slide{
     width: 25%;
     position: relative;
-    transition: 1s;
+    transition: 3s;
 }
 
 .slide img{
@@ -49,7 +49,7 @@ body{
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 2ms;
+    transition: 2s;
 }
 
 .manual-btn:not(:last-child){
@@ -80,7 +80,7 @@ body{
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 1s;
+    transition: 2s;
     
 }
 
