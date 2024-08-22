@@ -2,63 +2,57 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link para o arquivo CSS externo -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da viewport e o nível de zoom inicial para dispositivos móveis -->
+    <title>Carrossel</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para o arquivo CSS que contém os estilos da página -->
 </head>
 
 <body>
-
-<div class="slider"> <!-- Div principal do carrossel -->
-
-    <div class="slides"> <!-- Container que envolve todos os slides -->
-        <!-- Inputs de tipo "radio" para navegação entre as imagens do carrossel -->
-        <!-- Cada "radio" corresponde a uma imagem e serve para controlar qual slide está visível -->
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-
-        <!-- Fim dos botões de rádio -->
-
-        <!-- Container para cada slide individual -->
-        <!-- Cada "slide" contém uma imagem diferente -->
-        <div class="slide first"> <!-- O primeiro slide tem uma classe adicional "first" -->
-            <img src="https://th.bing.com/th/id/OIP.kQ2WPmYp6PRjuuP6QFt4twHaEK?rs=1&pid=ImgDetMain" alt="imagem 1">
+    <!-- Div principal que contém o carrossel -->
+    <div class="slider">
+        <!-- Container que envolve todos os slides e controles -->
+        <div class="slides">
+            <!-- Botões de rádio para navegação entre os slides -->
+            <input type="radio" name="radio-btn" id="radio1"> <!-- Botão de rádio para o primeiro slide -->
+            <input type="radio" name="radio-btn" id="radio2"> <!-- Botão de rádio para o segundo slide -->
+            <input type="radio" name="radio-btn" id="radio3"> <!-- Botão de rádio para o terceiro slide -->
+            
+            <!-- Slides com imagens -->
+            <div class="slide first">
+                <!-- Primeiro slide com uma imagem -->
+                <img src="https://th.bing.com/th/id/OIP.kQ2WPmYp6PRjuuP6QFt4twHaEK?rs=1&pid=ImgDetMain" alt="imagem 1"> <!-- Imagem para o primeiro slide -->
+            </div>
+            <div class="slide">
+                <!-- Segundo slide com uma imagem -->
+                <img src="https://imgresizer.eurosport.com/unsafe/2560x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/12/06/3503702-71421208-2560-1440.jpg" alt="imagem 2"> <!-- Imagem para o segundo slide -->
+            </div>
+            <div class="slide">
+                <!-- Terceiro slide com uma imagem -->
+                <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/Neymar-Reproducao-Instagram-e1688394749817.jpg?w=900" alt="imagem 3"> <!-- Imagem para o terceiro slide -->
+            </div>  
+            <!-- Fim dos slides -->
+            
+            <!-- Navegação automática do carrossel -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div> <!-- Botão de navegação automática para o primeiro slide -->
+                <div class="auto-btn2"></div> <!-- Botão de navegação automática para o segundo slide -->
+                <div class="auto-btn3"></div> <!-- Botão de navegação automática para o terceiro slide -->
+            </div>
         </div>
-        <div class="slide">
-            <img src="https://imgresizer.eurosport.com/unsafe/2560x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/12/06/3503702-71421208-2560-1440.jpg" alt="imagem 2">
+        
+        <!-- Navegação manual do carrossel -->
+        <div class="manual-navigation">
+            <!-- Botões de navegação manual que permitem ao usuário selecionar um slide -->
+            <label for="radio1" class="manual-btn"></label> <!-- Botão de navegação manual para o primeiro slide -->
+            <label for="radio2" class="manual-btn"></label> <!-- Botão de navegação manual para o segundo slide -->
+            <label for="radio3" class="manual-btn"></label> <!-- Botão de navegação manual para o terceiro slide -->
         </div>
-        <div class="slide">
-            <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/Neymar-Reproducao-Instagram-e1688394749817.jpg?w=900" alt="imagem 3">
-        </div>
-        <!-- Fim dos slides -->
-
-        <!-- Navegação automática -->
-        <!-- Estes botões são usados para mudar os slides automaticamente -->
-        <div class="navigation-auto">
-            <div class="auto-btn1"></div> <!-- Botão para o primeiro slide -->
-            <div class="auto-btn2"></div> <!-- Botão para o segundo slide -->
-            <div class="auto-btn3"></div> <!-- Botão para o terceiro slide -->
-        </div>
-        <!-- Fim da navegação automática -->
-
     </div>
-    <!-- Fim do container "slides" -->
 
-    <!-- Navegação manual -->
-    <!-- Etiquetas associadas aos botões de rádio para navegação manual entre os slides -->
-    <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label> <!-- Botão manual para o primeiro slide -->
-        <label for="radio2" class="manual-btn"></label> <!-- Botão manual para o segundo slide -->
-        <label for="radio3" class="manual-btn"></label> <!-- Botão manual para o terceiro slide -->
-    </div>
-    <!-- Fim da navegação manual -->
-
-</div>
-<!-- Fim do container "slider" -->
-
-<script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
+    <!-- Link para o arquivo JavaScript que contém a lógica do carrossel -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,21 +1,30 @@
+
+    // Inicializa a variável 'count' com o valor 1.
+// Essa variável é utilizada para rastrear qual "radio button" (botão de seleção) está atualmente selecionado.
 let count = 1;
+
+// Define o "radio button" com o id 'radio1' como marcado/selecionado por padrão.
+// Isso garante que o primeiro botão de rádio esteja selecionado ao carregar a página.
 document.getElementById("radio1").checked = true;
 
-// Define um intervalo para executar a função "nextImage" a cada 3000 milissegundos (3 segundos)
+// A função 'setInterval' define um temporizador que executa a função 'nextImage' a cada 2000 milissegundos (2 segundos).
+// Isso faz com que as imagens ou conteúdo relacionado mudem automaticamente a cada 2 segundos.
 setInterval(function() {
     nextImage();
-}, 3000);
+}, 5000);
 
-let count = 1; // Inicializa o contador com o valor 1
-
-// Função responsável por avançar para a próxima imagem do carrossel
+// Define a função 'nextImage' que é responsável por mudar a imagem ou o conteúdo exibido.
 function nextImage() {
-    count++; // Incrementa o contador para avançar para o próximo slide
-    if (count > 3) { // Verifica se o contador ultrapassou o número de slides
-        count = 1; // Se sim, redefine o contador para 1 (volta ao primeiro slide)
+    // Incrementa o valor de 'count' em 1.
+    count++;
+
+    // Verifica se 'count' é maior que 3, que é o número total de imagens ou itens de conteúdo.
+    // Se 'count' for maior que 3, ele é redefinido para 1 para voltar à primeira imagem.
+    if (count > 3) {
+        count = 1;
     }
 
-    // Marca o botão de rádio correspondente ao slide atual como "checked"
-    // Isso faz com que o slide correspondente seja exibido
+    // Seleciona o "radio button" correspondente ao valor atual de 'count'.
+    // O id dos botões de rádio é dinâmico ('radio1', 'radio2', 'radio3'), baseado no valor de 'count'.
     document.getElementById(`radio${count}`).checked = true;
 }
