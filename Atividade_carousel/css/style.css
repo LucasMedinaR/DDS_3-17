@@ -1,111 +1,119 @@
 body{
-    margin: 0;
-    padding: 0%;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0%; /* Remove o padding padrão do body */
+    width: 100%; /* Define a largura do body para 100% da tela */
+    height: 100vh; /* Define a altura do body para 100% da altura da viewport */
+    display: flex; /* Ativa o Flexbox no body para facilitar o alinhamento dos elementos */
+    justify-content: center; /* Centraliza horizontalmente os elementos dentro do body */
+    align-items: center; /* Centraliza verticalmente os elementos dentro do body */
 }
 
 .slider{
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    width: 800px; /* Define a largura do carrossel */
+    height: 400px; /* Define a altura do carrossel */
+    overflow: hidden; /* Esconde o conteúdo que excede a área visível do carrossel */
 }
 
 .slides{
-    width: 400%;
-    height: 400px;
-    display: flex;
+    width: 400%; /* Define a largura total do container para comportar 4 slides */
+    height: 400px; /* Define a altura dos slides */
+    display: flex; /* Alinha os slides em linha, permitindo o deslizamento horizontal */
 }
 
 .slides input{
-    display: none;
+    display: none; /* Esconde os botões de rádio */
 }
 
 .slide{
-    width: 25%;
-    position: relative;
-    transition: 3s;
+    width: 25%; /* Cada slide ocupa 25% da largura total do container */
+    position: relative; /* Permite o posicionamento absoluto de elementos dentro do slide */
+    transition: 5s; /* Define uma transição suave entre os slides com duração de 2 segundos */
 }
 
 .slide img{
-    width: 800px;
+    width: 800px; /* Define a largura das imagens para preencherem completamente os slides */
 }
 
 .manual-navigation{
-    position: relative;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content:center;
+    position: relative; /* Posiciona a navegação manual relativamente ao container pai */
+    width: 800px; /* Define a largura da navegação manual igual à largura do carrossel */
+    margin-top: -40px; /* Posiciona a navegação manual sobre o carrossel */
+    display: flex; /* Alinha os botões de navegação manual em linha */
+    justify-content: center; /* Centraliza os botões de navegação manual */
 }
 
 .manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 2s;
+    border: 4px solid #fff; /* Define uma borda branca grossa ao redor dos botões manuais */
+    padding: 5px; /* Adiciona um padding interno aos botões manuais */
+    border-radius: 10px; /* Define bordas arredondadas para os botões manuais */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões manuais */
+    transition: 1s; /* Adiciona uma transição suave ao estilo dos botões manuais */
 }
 
 .manual-btn:not(:last-child){
-    margin-right: 40px;
+    margin-right: 40px; /* Adiciona um espaçamento de 40px entre os botões manuais, exceto o último */
 }
 
 .manual-btn:hover{
-    background-color: #fff;
+    background-color: #fff; /* Altera o fundo dos botões manuais para branco ao passar o cursor sobre eles */
 }
 
 #radio1:checked ~.first{
-    margin-left: 0;
-
+    margin-left: 0; /* Quando o primeiro botão de rádio é selecionado, o primeiro slide é exibido sem deslocamento */
 }
 
 #radio2:checked ~.first{
-    margin-left: -25%;
-
+    margin-left: -25%; /* Quando o segundo botão de rádio é selecionado, o slide se desloca 25% para a esquerda */
 }
 
-
 #radio3:checked ~.first{
-    margin-left: -50%;
+    margin-left: -50%; /* Quando o terceiro botão de rádio é selecionado, o slide se desloca 50% para a esquerda */
 }
 
 .navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 2s;
-    
+    border: 4px solid #20a6ff; /* Define uma borda azul ao redor dos botões automáticos */
+    padding: 5px; /* Adiciona um padding interno aos botões automáticos */
+    border-radius: 10px; /* Define bordas arredondadas para os botões automáticos */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões automáticos */
+    transition: 1s; /* Adiciona uma transição suave ao estilo dos botões automáticos */
 }
 
 .navigation-auto{
-    position: absolute;
-    width: 800px;
-    margin-top: 360px;
-    display: flex;
-    justify-content: center;
+    position: absolute; /* Posiciona a navegação automática em relação ao container pai */
+    width: 800px; /* Define a largura da navegação automática igual à largura do carrossel */
+    margin-top: 360px; /* Posiciona a navegação automática dentro do carrossel */
+    display: flex; /* Alinha os botões de navegação automática em linha */
+    justify-content: center; /* Centraliza os botões de navegação automática */
 }
 
 .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-
+    margin-right: 40px; /* Adiciona um espaçamento de 40px entre os botões automáticos, exceto o último */
 }
 
-#radio1 :checked ~.navigation-auto .auto-btn1{
-    background-color: #fff;
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #fff; /* Altera a cor de fundo do primeiro botão automático quando o primeiro slide está ativo */
 }
 
-#radio2 :checked ~.navigation-auto .auto-btn2{
-    background-color: #fff;
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #fff; /* Altera a cor de fundo do segundo botão automático quando o segundo slide está ativo */
 }
 
-#radio3 :checked ~.navigation-auto .auto-btn3{
-    background-color: #fff;
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #fff; /* Altera a cor de fundo do terceiro botão automático quando o terceiro slide está ativo */
 }
 
+/* Estilos para dispositivos móveis (celulares) */
+@media screen and (max-width: 580px){
+    /* Adicione aqui os estilos específicos para telas menores */
+}
+
+/* Estilos para tablets */
+@media(min-width: 768px) and (max-width: 1024px){
+    /* Adicione aqui os estilos específicos para tablets */
+}
+
+/* Estilos para orientação horizontal */
+@media(orientation: landscape){
+    /* Adicione aqui os estilos específicos para telas em orientação paisagem */
+}
