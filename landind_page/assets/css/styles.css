@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+  }
+
+  body{
+    font-family: Roboto, sans-serif;
+  }
+
+  ul li{
+    list-style-type: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  a:hover{
+    color: var(--secondary-color);
+  }
+
+  .fist{
+    color:var(--secondary-color);
+  }
+
+  .jab{
+    color: var(--primary-color);
+  }
+
+  .tv{
+    color: var(--secondary-color);
+  }
+
+  nav{
+    background: #fff; /*plano de fundo*/
+    display: flex; /* exibição: flexível; */
+    justify-content: space-between; /*justificar-conteúdo: espaço entre;*/
+    align-items: center;/*alinhar itens: centro; preenchimento:*/
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1; /*caixa de texto*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .hamburger{
+    display: none;
+    
+  }
+
+  .logo{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-item{
+    margin-left: 2rem;
+  }
+
+  .nav-link{
+    font-weight: var(--bold-font);
+  }
+
+
+  /*Hero section*/
+  .flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.9rem;
+    max-width: 1100px;
+    margin: 2rem auto -6rem;
+  }
+
+  .into-text h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text h3{
+    line-height: var(--line-height);
+  }
+
+  .hear{
+    color: var(--primary-color);
+  }
+
+  .connecting{
+    color: var(--secondary-color);
+  }
+
+  .btb{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .red{
+    background-color: var(--secondart-color);
+    margin-right: 1.5rem;
+    
+  }
+  .red:hover{
+    background-color:#f1262d;
+    color: #fff;
+  }
+
+  .blue{
+    background-color: #f1262d;
+    color:#fff
+  }
+
+  .blue:hover{
+    background-color: #095cf7;
+    color:#fff
+  }
+
+  iframe{
+    max-width: 30rem;
+    border-top: 40px groove var(--prinary-color);
+    border-bottom: 40px groove var(--primary-color);
+    border-right: 28px solid var(--secondary-color);
+    border-left: 28px solid var(--secondary-color);
+  }
+
+  .stand-1{
+    height: 90px;
+    width: 6px;
+    background-color: var(--secondary-color);
+    transform: rotate(-40deg);
+    position: relative;
+    top: -105px;
+    left: 25px;
+  }
+
+  .stand-2{
+    height: 90px;
+    width: 6px;
+    background-color: var(--secondary-color);
+    transform: rotate(-40deg);
+    position: relative; 
+    top: -105px;
+    left: 255px;
+  }
+
+  .about{
+    position: realtive;
+    background: url("../images/jab-transformed.png") no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .about h3 {
+    font-size: 3em;
+    margin-bottom: -20px;
+  }
+  
+  .about p {
+    text-shadow: 2px 2px 2px #333;
+    font-size: 1.8rem;
+  }
+  
+
+/* Dark theme starts*/
+
+/* Dark theme ends */
+
+/* Navbar starts */
+
+/* Dark theme */
+
+/* Dark theme ends */
+/* Navbar ends */
+
+/* Hero section starts */
+
+/* Hero section ends */
+
+/* About section start*/
+
+/* About section ends */
+
+/* Image gallery starts */
+
+/* Image gallery ends */
+
+/* Stakeholders start */
+/* Stakeholders ends */
+
+/* Scroll to top button starts */
+
+/* Scroll to top button ends */
+
+/* Subscription form starts */
+
+/* Subscription form ends */
+
+/* Social icons */
+
+/* Footer */
+
+/* Media Query */
+
+
